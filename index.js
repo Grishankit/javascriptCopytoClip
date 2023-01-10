@@ -4,7 +4,7 @@
         
           var last_name ='Last Name: ' +  jQuery('input[name="last_name"]').val();           
 
-          var first_name ='\nFirst Name: ' + jQuery('input[name="first_name"]').val();           
+          var first_name ='First Name: ' + jQuery('input[name="first_name"]').val();           
 
           var middle_name ='\nMiddle Name: ' + jQuery('input[name="middle_name"]').val();           
 
@@ -44,7 +44,8 @@
 
           var results =last_name+first_name+middle_name+generation+title+ssn_itin+tax_id_ein+office+address_1+address_2+address_3+city+state+zip+county+county+phone+fax+email+party_text;
 
-          alert(results);
+          var dummy = $('<input>').val(results).appendTo('body').select()
+          document.execCommand('copy') 
 
       }
 
@@ -73,7 +74,9 @@
           var dischargable_debt ='\nTotal Dischargeable Debt (Computed): ' +  jQuery('input[name="dischargable_debt"]').val();   
 
           var results=schedule_ab_real_estate+schedule_ab_personal_property+schedule_d_secured_claims+schedule_ef_priority_unsecured_claims+schedule_ef_nonpriority_unsecured_claims+schedule_i_monthly_income+schedule_j_monthly_expense+current_monthly_expense+nondischargable_debt+dischargable_debt;
-          alert(results);   
+          
+          var dummy = $('<input>').val(results).appendTo('body').select()
+          document.execCommand('copy') 
 
       }
 
@@ -153,13 +156,14 @@
 
           var results=schedule_i_line2_debtor+schedule_i_line2_spouse+line8_operating_expenses+schedule_i_line6_debtor+schedule_i_line6_spouse+line9c_rent_expense+schedule_j_line23c_monthly_net_income+line11_no_of_vehicle+line12_public_transportation_expense+marital_status+line13c_vehicle1_lease_expense +line11_debtor +line11_spouse +line13f_vehicle2_lease_expense +line13_no_of_people +line15_public_transpotation_expense +line13_median_family_income +line1_non_consumer_debt +line24_irs_expense +line2_disable_veteran +line29_education_expense +line30_additional_food_and_clothing_expense +line4_current_monthly_income +line32_additional_expense_deductions +line37_deduction_for_debt_payment +line6_food_clothing_other_items +line38_deduction_for_income +line7c_age1 +line7f_age2 +line39c_monthly_disposable_income +line39d_60month_disposable_income +line40_initial_presumptions +line41a_nonpriority_unsecured_debt +line41b_25percent_nonpriority_unsecured_debt +line42_secondary_presumptions;
           
-            alert(results);   
+         var dummy = $('<input>').val(results).appendTo('body').select()
+         document.execCommand('copy')  
 
       }
 
-      debtor_info();
-      summary_of_schedule();
-      means_test_information();
+       debtor_info();
+       summary_of_schedule();
+       means_test_information();
 
 });
 
